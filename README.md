@@ -89,10 +89,20 @@ Full details are in docs/findings.md and docs/data_cleaning_log.md.
 - license was 99.998% missing - dropped
 - house_rules was dropped - over half the values were missing, and the rest was unstructured free text not usable in SQL or Power BI
 
+## SQL Business Questions
 
+Answered using GROUP BY aggregation, RANK() / ROW_NUMBER() with PARTITION BY, and CTEs. Full queries in sql/airbnb_analysis.sql.
 
-
-
+1. Which neighbourhood groups have the highest average prices?
+2. Which room types generate the most listings?
+3. Which areas have the highest review activity?
+4. How does availability vary by neighbourhood?
+5. Which hosts have the largest number of listings?
+6. How does the cancellation policy relate to pricing?
+7. What factors appear associated with higher prices?
+8. Which neighbourhoods offer the best balance of price and reviews?
+9. What percentage of listings are instant-bookable?
+10. Which areas have the highest average availability?
 
 
 
