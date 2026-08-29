@@ -121,8 +121,19 @@ The dataset contains 102,035 unique host_id values across 102,036 listings, maki
 5. **Several categorical variables have unusually balanced distributions**  
 instant_bookable, cancellation_policy, and host_identity_verified show distributions that are remarkably close to evenly split across their categories. While balanced distributions are not inherently invalid, seeing this pattern across several unrelated variables raises additional concerns about the authenticity and generation process of the dataset.
 
+## Recommendations
 
+1. **Investigate the gap between historical engagement and current demand**  
+Staten Island and Queens show strong review activity alongside relatively high listing availability. This warrants further investigation into why well-reviewed listings may still have substantial availability. Potential areas to examine include outdated listing photos or descriptions, increased competition, changes in traveler preferences, and the effectiveness of current marketing efforts.
 
+2. **Audit calculated_host_listings_count before using it for decision-making**  
+The column conflicts with the directly observable host_id distribution, and its calculation method is unclear. Its source and derivation should be validated before the metric is used in further analysis or presented as a business KPI.
+
+3. **Replace or independently validate the price field**  
+The analysis found several patterns inconsistent with expected real-world pricing behavior, including weak relationships with other listing attributes and repeated maximum values. The price field should therefore be treated as unreliable for pricing decisions until independently verified. Future pricing analysis should use a validated real-world source or a confirmed pricing methodology.
+
+4. **Establish a data-quality validation layer for future analysis**  
+Before building dashboards or making business recommendations, key fields should be tested for uniqueness, distributions, logical consistency, outliers, and relationships with related variables. This would help identify unreliable or potentially synthetic fields early in the analytical workflow.
 
 
 
