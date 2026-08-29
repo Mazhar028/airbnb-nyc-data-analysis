@@ -104,7 +104,22 @@ Answered using GROUP BY aggregation, RANK() / ROW_NUMBER() with PARTITION BY, an
 9. What percentage of listings are instant-bookable?
 10. Which areas have the highest average availability?
 
+## Key Findings 
 
+1. **Engagement is not proportional to listing volume**  
+Staten Island and Queens have the highest average reviews per listing despite having substantially fewer listings than Manhattan, which ranks lowest. This suggests that listing volume alone does not explain guest engagement. Lower competition may be one possible factor.
+
+2. **Historical engagement does not necessarily indicate current demand**  
+Staten Island has the highest average availability while also having the highest average reviews per listing. This suggests that highly reviewed listings may have accumulated strong historical engagement without necessarily experiencing high current occupancy or demand.
+
+3. **The price field shows little evidence of real-world pricing behavior**  
+An IQR-based outlier analysis identified zero price outliers, while the price percentiles appeared unusually uniform. Price also showed no meaningful relationship with room type, borough, cancellation policy, or guest rating. In one counterintuitive case, 1-star listings had higher prices than 5-star listings. Additionally, listings across different boroughs share the exact same maximum price of $1,200.00. Taken together, these patterns strongly suggest that the price field may be synthetically generated or unreliable for business analysis.
+
+4. **Host concentration is inconsistent with the available host metrics**  
+The dataset contains 102,035 unique host_id values across 102,036 listings, making the relationship between hosts and listings almost entirely one-to-one. This conflicts sharply with calculated_host_listings_count, which reports some hosts managing more than 300 listings. This inconsistency makes host-level analysis unreliable.
+
+5. **Several categorical variables have unusually balanced distributions**  
+instant_bookable, cancellation_policy, and host_identity_verified show distributions that are remarkably close to evenly split across their categories. While balanced distributions are not inherently invalid, seeing this pattern across several unrelated variables raises additional concerns about the authenticity and generation process of the dataset.
 
 
 
