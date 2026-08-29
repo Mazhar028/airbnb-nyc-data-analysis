@@ -136,6 +136,43 @@ The analysis found several patterns inconsistent with expected real-world pricin
 Before building dashboards or making business recommendations, key fields should be tested for uniqueness, distributions, logical consistency, outliers, and relationships with related variables. This would help identify unreliable or potentially synthetic fields early in the analytical workflow.
 
 
+## Dashboard 
+
+Three-page interactive Power BI dashboard connected to the MySQL database via MySQL Connector/NET.
+
+- Page 1 - Overview: KPI cards (including a DAX workaround for the Boolean instant_bookable field)
+- Page 2 - Geography: Bubble map using averaged listing coordinates by neighbourhood
+- Page 3 - Rankings: Top-N filtering with a minimum listing count threshold, using a SUMMARIZE + MAXX DAX measure
+
+**Screenshots:**  
+1. dashboard/screenshots/page1_overview.png
+2. dashboard/screenshots/page2_map.png
+3. dashboard/screenshots/page3_topN.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
