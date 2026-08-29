@@ -30,5 +30,20 @@ The objective was to simulate a **real-world data analyst workflow**, not simply
 3. **Power BI** - Three-page interactive dashboard and data visualization
 4. **Jupyter Notebook** - Documented data-cleaning workflow and analytical process 
 
+## Pipeline
+
+The project follows a four-phase analytics pipeline, with each phase building on the output of the previous one.
+
+**Phase 1 - Data Cleaning & Validation**
+The raw CSV dataset containing **102,599 rows** is profiled and cleaned using **Pandas**. The process includes correcting data types, handling missing values, standardizing inconsistent entries, removing duplicates, and filtering invalid records. This results in a final cleaned dataset of **102,036 rows**.
+
+**Phase 2 - SQL Analysis**
+The cleaned dataset is loaded into **MySQL**, where **10 business questions** are investigated using SQL. The analysis uses aggregations, **CTEs, window functions**, and other SQL techniques to identify meaningful patterns and relationships in the data.
+
+**Phase 3 - Power BI Dashboard**
+Power BI connects to the MySQL database and transforms the analytical results into a **three-page interactive dashboard**, allowing users to explore key metrics and findings through filters and visualizations.
+
+**Phase 4 - Business Reporting**
+The final phase brings the analysis together in a **business insights report**, translating the analytical findings into clear conclusions and explaining their practical implications.
 
 
