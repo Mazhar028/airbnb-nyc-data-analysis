@@ -65,3 +65,54 @@ The final phase brings the analysis together in a **business insights report**, 
   - data_cleaning_log.md
 - .gitignore
 
+## Data Cleaning Summary
+
+Full details are in docs/findings.md and docs/data_cleaning_log.md.  
+
+**Summary of what was done:**
+
+- price and service_fee were stored as text with dollar signs and commas - stripped and converted to numeric
+- last_review was stored as plain text - converted to a proper date format so it could be sorted and filtered
+- NAME, host_name, and cancellation_policy had missing values - filled with "Unknown"
+- price, service_fee, and construction_year had missing values - filled with the mean, since these were fairly evenly distributed
+- minimum_nights, number_of_reviews, and calculated_host_listings_count had missing values - filled with the median instead of the mean, since these were skewed
+- instant_bookable had missing values - filled with the mode, since it's a true/false field and "Unknown" isn't a valid state for it
+- rows missing latitude or longitude were dropped entirely, since guessing coordinates would create fake locations
+- missing values in last_review were left as-is on purpose - a blank just means the listing never got a review, so filling it in would be misleading
+- minimum_nights had 13 rows with negative values - dropped
+- availability_365 had 431 rows with negative values - capped at 0
+- availability_365 had about 2,752 rows going above 365 - capped at 365
+- one row had an availability value of 3,677 - dropped as an extreme outlier
+- neighbourhood_group had typos like "brookln" and "manhatan" - standardized to correct borough names
+- 541 exact duplicate rows were found and removed
+- country and country_code had only one unique value across the whole dataset - dropped, no analytical value
+- license was 99.998% missing - dropped
+- house_rules was dropped - over half the values were missing, and the rest was unstructured free text not usable in SQL or Power BI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
