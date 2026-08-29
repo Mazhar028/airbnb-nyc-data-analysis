@@ -15,7 +15,6 @@ Built an end-to-end data analytics project using 102K+ NYC Airbnb listings, cove
 - How to Reproduce
 
 ## Project Overview
-### Project Overview
 
 This project analyzes the **NYC Airbnb Open Data** dataset through an end-to-end data analytics workflow. The raw dataset contained **102,599 rows and 26 columns**. After cleaning, validation, and removal of irrelevant or unreliable fields, the dataset was reduced to **102,036 rows and 22 columns**.
 
