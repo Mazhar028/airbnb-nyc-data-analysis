@@ -13,3 +13,12 @@ Built an end-to-end data analytics project using 102K+ NYC Airbnb listings, cove
 - Dashboard
 - Limitations
 - How to Reproduce
+
+## Project Overview
+### Project Overview
+
+This project analyzes the **NYC Airbnb Open Data** dataset through an end-to-end data analytics workflow. The raw dataset contained **102,599 rows and 26 columns**. After cleaning, validation, and removal of irrelevant or unreliable fields, the dataset was reduced to **102,036 rows and 22 columns**.
+
+The cleaned data was loaded into **MySQL**, using a database named `project_airbnb` and a table named `airbnb_listings`, where business-focused SQL analysis was performed.
+
+The objective was to simulate a **real-world data analyst workflow**, not simply clean the data and create visualizations, but validate whether each metric actually represented what it appeared to measure before using it to draw conclusions or report business insights.
