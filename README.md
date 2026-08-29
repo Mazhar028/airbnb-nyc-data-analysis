@@ -46,4 +46,22 @@ Power BI connects to the MySQL database and transforms the analytical results in
 **Phase 4 - Business Reporting**
 The final phase brings the analysis together in a **business insights report**, translating the analytical findings into clear conclusions and explaining their practical implications.
 
+## Repository Structure
+
+- data
+  - raw - original Airbnb Open Data CSV
+  - cleaned - cleaned dataset, 102,036 rows
+- sql
+  - airbnb_analysis.sql - schema, table creation, and all 10 business questions
+- dashboard
+  - airbnb_dashboard.pbix
+  - screenshots
+- reports
+  - business_report.pdf
+  - presentation.pptx
+- docs
+  - data_dictionary.md
+  - findings.md
+  - data_cleaning_log.md
+- .gitignore
 
