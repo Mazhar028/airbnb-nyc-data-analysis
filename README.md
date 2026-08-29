@@ -165,7 +165,7 @@ Three-page interactive Power BI dashboard connected to the MySQL database via My
 4. Open dashboard/airbnb_dashboard.pbix in Power BI Desktop and point the MySQL connector at your local database
    
 
-
+**Author:** <ins> Md Mazhar Imam </ins>
 
 
 
