@@ -22,3 +22,13 @@ This project analyzes the **NYC Airbnb Open Data** dataset through an end-to-end
 The cleaned data was loaded into **MySQL**, using a database named `project_airbnb` and a table named `airbnb_listings`, where business-focused SQL analysis was performed.
 
 The objective was to simulate a **real-world data analyst workflow**, not simply clean the data and create visualizations, but validate whether each metric actually represented what it appeared to measure before using it to draw conclusions or report business insights.
+
+## Tech Stack
+
+1. **Python (Pandas, NumPy)** - Data profiling, transformation, cleaning, and validation
+2. **MySQL** - Database schema design, data loading, and business-focused SQL analysis
+3. **Power BI** - Three-page interactive dashboard and data visualization
+4. **Jupyter Notebook** - Documented data-cleaning workflow and analytical process 
+
+
+
