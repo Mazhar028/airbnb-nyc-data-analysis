@@ -149,8 +149,21 @@ Three-page interactive Power BI dashboard connected to the MySQL database via My
 2. dashboard/screenshots/page2_map.png
 3. dashboard/screenshots/page3_topN.png
 
+## Limitations
 
+- **Price data may be unreliable** - The price field shows no meaningful relationship with room type, borough, cancellation policy, or guest rating. It also shows an unexpected inverse relationship with guest ratings, with lower-rated listings appearing more expensive. These patterns strongly suggest that the field may be synthetically generated and should not be used for pricing decisions without independent validation.
+- **calculated_host_listings_count cannot be independently verified** - The metric conflicts with the directly observable distribution of host_id, while its calculation method and source are unknown. As a result, it should not be relied upon for host-level analysis until its derivation is confirmed.
+- **Small neighbourhood sample sizes can distort rankings** - Neighbourhoods with only one or two listings initially appeared at the top of availability rankings because of their extremely small sample sizes. A minimum listing threshold was therefore applied to reduce the effect of sampling noise and produce more meaningful comparisons.
+- **Review-based time analysis is affected by missing values** - last_review and reviews_per_month are missing for approximately 15,800 listings that have never received a review. This is an expected characteristic of the dataset rather than necessarily a data-quality error. However, analyses involving review activity over time represent only listings with available review history and should be interpreted accordingly.
+- **house_rules was excluded from the analysis** - The field contains approximately 51% missing values and consists primarily of unstructured free text, making it unsuitable for the structured analysis performed in this project. It could be revisited in future work using NLP techniques such as text classification, keyword extraction, or topic modeling.
 
+## How to Reproduce 
+1. Clone the Repo  
+   git clone https://github.com/Mazhar028/airbnb-nyc-data-analysis.git
+2. Load data/raw/ into the Pandas cleaning notebook to reproduce the cleaned dataset
+3. Run sql/airbnb_analysis.sql to create the schema and load the cleaned data
+4. Open dashboard/airbnb_dashboard.pbix in Power BI Desktop and point the MySQL connector at your local database
+   
 
 
 
